@@ -7,3 +7,4 @@ Algorithms - Sorting: bubble, insert, merge, and quick.
 
 ## **Data Structure and Algorithm Demo**
 - [Basic queue](./queue.js)
+- [Priority queue](./priority-queue.js)

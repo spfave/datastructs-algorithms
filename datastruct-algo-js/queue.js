@@ -21,6 +21,8 @@ function CreateQueue() {
   };
 }
 
+module.exports = { CreateQueue };
+
 // Demo
 const q = CreateQueue();
 console.log(`q.isEmpty: `, q.isEmpty);
