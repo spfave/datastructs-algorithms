@@ -9,3 +9,4 @@ Algorithms - Sorting: bubble, insert, merge, and quick.
 - [Basic queue](./queue.js)
 - [Priority queue](./priority-queue.js)
 - [Stack](./stack.js)
+- [Linked List](./linked-list.js)
