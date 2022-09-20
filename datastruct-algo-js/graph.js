@@ -1,4 +1,6 @@
 // Data Structure: Graph
+const { CreateQueue } = require('./queue');
+
 function CreateNode(key) {
   const neighbors = [];
 
@@ -52,10 +54,34 @@ function CreateGraph(directed = false) {
         })
         .join('\n');
     },
+
+    breathFirstSearch(startNodeKey, visitFn) {
+      const startNode = this.getNode(startNodeKey);
+      const visitedNodes = nodes.reduce((acc, node) => {
+        acc[node.key] = false;
+        return acc;
+      }, {});
+
+      const queue = CreateQueue();
+      queue.enqueue(startNode);
+
+      while (!queue.isEmpty()) {
+        const currentNode = queue.dequeue();
+
+        if (!visitedNodes[currentNode.key]) {
+          visitFn(currentNode);
+          visitedNodes[currentNode.key] = true;
+        }
+
+        currentNode.neighbors.forEach((node) => {
+          if (!visitedNodes[node.key]) queue.enqueue(node);
+        });
+      }
+    },
   };
 }
 
-// Demo
+// Demo: Graph
 const graph = CreateGraph(true);
 
 graph.addNode('Heero');
@@ -71,3 +97,34 @@ graph.addEdge('Heero', 'Zechs');
 graph.addEdge('Relena', 'Zechs');
 
 console.log(`graph.print(): `, graph.print());
+console.log('\n');
+
+// Demo: Breath First Search
+const graphBF = CreateGraph(true);
+const nodesBF = ['a', 'b', 'c', 'd', 'e', 'f'];
+const edgesBF = [
+  ['a', 'b'],
+  ['a', 'e'],
+  ['a', 'f'],
+  ['b', 'd'],
+  ['b', 'e'],
+  ['c', 'b'],
+  ['d', 'c'],
+  ['d', 'e'],
+];
+
+nodesBF.forEach((node) => {
+  graphBF.addNode(node);
+});
+
+edgesBF.forEach((nodes) => {
+  graphBF.addEdge(...nodes);
+});
+
+console.log('graph');
+console.log(graphBF.print());
+console.log('graph BF search:');
+graphBF.breathFirstSearch('a', (node) => {
+  console.log(node.key);
+});
+console.log('\n');

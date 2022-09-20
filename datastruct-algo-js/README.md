@@ -11,3 +11,4 @@ Algorithms - Sorting: bubble, insert, merge, and quick.
 - [Stack](./stack.js)
 - [Linked List](./linked-list.js)
 - [Graph](./graph.js)
+  - Graph: Breath First Search
