@@ -7,7 +7,7 @@ function CreateQueue() {
       queue.push(item);
     },
     dequeue() {
-      queue.shift();
+      return queue.shift();
     },
     peek() {
       return queue[0];
@@ -15,7 +15,7 @@ function CreateQueue() {
     get length() {
       return queue.length;
     },
-    get isEmpty() {
+    isEmpty() {
       return queue.length === 0;
     },
   };
@@ -24,23 +24,23 @@ function CreateQueue() {
 module.exports = { CreateQueue };
 
 // Demo
-const q = CreateQueue();
-console.log(`q.isEmpty: `, q.isEmpty);
+// const q = CreateQueue();
+// console.log(`q.isEmpty(): `, q.isEmpty());
 
-q.enqueue('Fund a keyboard groupby');
-q.enqueue('Wait a rather long time for keyboard');
-q.enqueue('Build new keyboard');
-q.enqueue('That new thock makes it all worth it');
+// q.enqueue('Fund a keyboard groupby');
+// q.enqueue('Wait a rather long time for keyboard');
+// q.enqueue('Build new keyboard');
+// q.enqueue('That new thock makes it all worth it');
 
-console.log(`q.peek(): `, q.peek());
-console.log(`q.length: `, q.length);
-console.log(`q.isEmpty: `, q.isEmpty);
+// console.log(`q.peek(): `, q.peek());
+// console.log(`q.length: `, q.length);
+// console.log(`q.isEmpty(): `, q.isEmpty());
 
-q.dequeue();
-q.dequeue();
-q.dequeue();
-console.log(`q.peek(): `, q.peek());
+// q.dequeue();
+// q.dequeue();
+// q.dequeue();
+// console.log(`q.peek(): `, q.peek());
 
-q.dequeue();
-console.log(`q.peek(): `, q.peek());
-console.log(`q.isEmpty: `, q.isEmpty);
+// q.dequeue();
+// console.log(`q.peek(): `, q.peek());
+// console.log(`q.isEmpty(): `, q.isEmpty());

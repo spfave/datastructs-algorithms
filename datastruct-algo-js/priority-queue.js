@@ -24,15 +24,15 @@ function CreatePriorityQueue() {
     get length() {
       return highPriorityQueue.length + lowPriorityQueue.length;
     },
-    get isEmpty() {
-      return highPriorityQueue.isEmpty && lowPriorityQueue.isEmpty;
+    isEmpty() {
+      return highPriorityQueue.isEmpty() && lowPriorityQueue.isEmpty();
     },
   };
 }
 
 // Demo
 const q = CreatePriorityQueue();
-console.log(`q.isEmpty: `, q.isEmpty);
+console.log(`q.isEmpty(): `, q.isEmpty());
 
 q.enqueue('Fund a keyboard groupbuy');
 q.enqueue('Build new keyboard');
@@ -50,4 +50,4 @@ console.log(`q.peek(): `, q.peek());
 q.dequeue();
 console.log(`q.peek(): `, q.peek());
 console.log(`q.length: `, q.length);
-console.log(`q.isEmpty: `, q.isEmpty);
+console.log(`q.isEmpty(): `, q.isEmpty());
