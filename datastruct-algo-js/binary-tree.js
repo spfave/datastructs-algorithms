@@ -49,12 +49,9 @@ function CreateBinaryTree(rootKey) {
     print(traversalType = 'IN_ORDER') {
       let result = '';
 
-      // function visit(node) {
-      //   result += result.length === 0 ? node.key : ` -> ${node.key}`;
-      // }
-      const visit = (node) => {
-        result += result.length === 0 ? node.key : ` => ${node.key}`;
-      };
+      function visit(node) {
+        result += result.length === 0 ? node.key : ` -> ${node.key}`;
+      }
 
       TRAVERSALS[traversalType](this.root, visit);
       return result;
