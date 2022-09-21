@@ -78,6 +78,24 @@ function CreateGraph(directed = false) {
         });
       }
     },
+    depthFirstSearch(startNodeKey, visitFn) {
+      const startNode = this.getNode(startNodeKey);
+      const visitedNodes = nodes.reduce((acc, node) => {
+        acc[node.key] = false;
+        return acc;
+      }, {});
+
+      function explore(node) {
+        if (visitedNodes[node.key]) return;
+
+        visitFn(node);
+        visitedNodes[node.key] = true;
+
+        node.neighbors.forEach((node) => explore(node));
+      }
+
+      explore(startNode);
+    },
   };
 }
 
@@ -128,3 +146,9 @@ graphBF.breathFirstSearch('a', (node) => {
   console.log(node.key);
 });
 console.log('\n');
+
+// Demo: Depth First Search
+console.log('graph DF search:');
+graphBF.depthFirstSearch('a', (node) => {
+  console.log(node.key);
+});
