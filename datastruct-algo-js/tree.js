@@ -30,7 +30,6 @@ function CreateTree(rootKey) {
       }
 
       function addKeyToResult(node, depth) {
-        console.log(`depth: `, depth, `_${' '.repeat(depth * 1)}_`);
         result +=
           result.length === 0
             ? node.key
