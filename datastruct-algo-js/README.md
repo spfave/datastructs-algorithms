@@ -13,3 +13,4 @@ Algorithms - Sorting: bubble, insert, merge, and quick.
 - [Graph](./graph.js)
   - Graph: Breath First Search
   - Graph: Depth First Search
+- [Tree](./tree.js)
