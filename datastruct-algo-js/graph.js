@@ -1,4 +1,5 @@
 // Data Structure: Graph
+// Algorithm: Graph breath first search, depth first search
 const { CreateQueue } = require('./queue');
 
 function CreateNode(key) {
