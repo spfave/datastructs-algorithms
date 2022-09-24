@@ -18,3 +18,4 @@ Algorithms - Sorting: bubble, insert, merge, and quick.
 - [Bubble Sort](./sort-bubble.js)
 - [Insertion Sort](./sort-insertion.js)
 - [Merge Sort](./sort-merge.js)
+- [Quick Sort](./sort-quick.js)
