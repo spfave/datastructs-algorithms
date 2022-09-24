@@ -16,3 +16,4 @@ Algorithms - Sorting: bubble, insert, merge, and quick.
 - [Tree](./tree.js)
 - [Binary Tree](./binary-tree.js)
 - [Bubble Sort](./sort-bubble.js)
+- [Insertion Sort](./sort-insertion.js)
