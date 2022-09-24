@@ -15,3 +15,4 @@ Algorithms - Sorting: bubble, insert, merge, and quick.
   - Graph: Depth First Search
 - [Tree](./tree.js)
 - [Binary Tree](./binary-tree.js)
+- [Bubble Sort](./sort-bubble.js)
