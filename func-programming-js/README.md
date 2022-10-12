@@ -7,3 +7,4 @@
 ## **Data Structure and Algorithm Demo**
 - [Higher Order functions](./higher-order-funcs.js)
 - [Immutable Data Structures](./immutable-data-struct.js)
+- [Currying](./currying.js)
