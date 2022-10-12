@@ -5,4 +5,4 @@
 
 
 ## **Data Structure and Algorithm Demo**
-- 
+- [Higher Order functions](./higher-order-funcs)
