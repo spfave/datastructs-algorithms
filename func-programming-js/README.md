@@ -5,4 +5,5 @@
 
 
 ## **Data Structure and Algorithm Demo**
-- [Higher Order functions](./higher-order-funcs)
+- [Higher Order functions](./higher-order-funcs.js)
+- [Immutable Data Structures](./immutable-data-struct.js)
