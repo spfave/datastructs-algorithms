@@ -7,9 +7,14 @@
  * - ability to unit test named functions
  */
 
-// Demo
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-const double = (val) => 2 * val;
 
+// Demo: non point free
+const arrayDoubleA = array.map((v) => v * 2);
+console.log(`arrayDoubleA: `, arrayDoubleA);
+console.log('\n');
+
+// Demo: point free
+const double = (val) => 2 * val;
 const arrayDouble = array.map(double);
 console.log(`arrayDouble: `, arrayDouble);
