@@ -3,7 +3,7 @@
 
 ## **Summary**
 Data Structures: queues, stacks, linked lists, graphs, and trees  
-Algorithms - Sorting: bubble, insert, merge, and quick.
+Algorithms - Sorting: bubble, insert, merge, and quick.  
 
 ## **Data Structure and Algorithm Demo**
 - [Basic queue](./queue.js)
